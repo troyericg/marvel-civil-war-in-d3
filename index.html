@@ -1,0 +1,124 @@
+<!-- HTML5 ENCODING -->
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title>Marvel&rsquo;s Civil War: The Breakdown</title>
+	<link rel="stylesheet" type="text/css" href="css/screenImport.css" />
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="js/vendor/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vendor/mustache.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="tooltip"></div>
+		<div id="main">
+			<div id="header">
+				<p class="kicker">Marvel Comics</p>
+				<h1>Civil War</h1>
+				<h2>Breakdown</h2>
+				<p><a href="http://en.wikipedia.org/wiki/Civil_War_(comics)" target="_blank">The Marvel Comics event, Civil War,</a> involves the introduction of a Superhuman Registration Act in the United States. The act requires any person in the United States with superhuman abilities to register with the federal government as a "human weapon of mass destruction," reveal their true identity to the authorities. Characters within the superhuman community split into two groups: one advocating the registration as a responsible obligation, and the other opposing the law on the grounds that it violates civil liberties. <strong>Below is a breakdown of the heroes and villains involved.</strong></p>
+			</div>
+			
+			
+			<div class="main-stage">
+				<div class="section-1">
+					<h4 class="key top">Power Types</h4>
+					<ul class="filter" id="type">
+						<li class="supers" data-type="supers">Superhumans</li>
+						<li class="mutants" data-type="mutants">Mutants</li>
+						<li class="mystics" data-type="mystics">Mystics</li>
+						<li class="humans" data-type="humans">Humans</li>
+					</ul>
+					<div class="color-key">
+						<h4 class="key">Key</h4>
+						<ul class="color-list stance">
+							<li data-antiregistration="TRUE"><span></span>Anti-Registration</li>
+							<li data-antiregistration="FALSE"><span></span>Pro-Registration</li>
+						</ul>
+						<ul class="color-list alignment">
+							<li data-alignment="hero"><span></span>Hero</li>
+							<li data-alignment="villain"><span></span>Villain</li>
+						</ul>
+						<ul class="color-list gender">
+							<li data-gender="M"><span></span>Male</li>
+							<li data-gender="F"><span></span>Female</li>
+						</ul>
+						<ul class="color-list status">
+							<li data-statusof="active"><span></span>Active</li>
+							<li data-statusof="captured"><span></span>Captured</li>
+							<li data-statusof="deceased"><span></span>Deceased</li>
+							<li data-statusof="other"><span></span>Other</li>
+						</ul>
+					</div>
+				</div>
+				<div id="donut-chart">
+					<div id="char-count">
+						<p class="char-num upper"><span></span> Characters</p>
+						<p class="char-num lower">of <span></span></p>
+					</div>
+				</div>
+				<div id="square-charts">
+					<div class="chart-nav-container">
+						<div id="chart-nav">
+							<h2>Breakdown by Team</h2>
+							<ul data-type="stance" class="color-list stance filter grid active">
+								<li data-antiregistration="TRUE"><span></span>Anti-Registration</li>
+								<li data-antiregistration="FALSE"><span></span>Pro-Registration</li>
+							</ul>
+							<ul data-type="gender" class="color-list gender filter grid">
+								<li data-gender="M"><span></span>Male</li>
+								<li data-gender="F"><span></span>Female</li>
+							</ul>
+							<ul data-type="status" class="color-list status filter grid">
+								<li data-statusof="active"><span></span>Active</li>
+								<li data-statusof="captured"><span></span>Captured</li>
+								<li data-statusof="deceased"><span></span>Deceased</li>
+								<li data-statusof="other"><span></span>Other</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<h6>Made, with love, by <a href="https://github.com/troyericg" target="_blank">Troy Griggs</a>. Oh, also with data from <a href="http://marvel.com/" target="_blank">Marvel.com</a> and from the <a href="http://www.comicvine.com/api/" target="_blank">Comic Vine API</a>, provided by <a href="http://www.comicvine.com/" target="_blank">Comic Vine</a>.</h6>
+		</div>
+	</div>
+	<script id="box-chart" type="text/template">
+		<div class="box-chart-container">
+			<div class="box-chart-info" id="box-chart-{{id}}">
+				<h3>{{team}}</h3>
+				<p>{{count}} members</p>
+			</div>
+		</div>
+	</script>
+	<script id="tooltip-info" type="text/template">
+		<div class="tooltip-inner">
+			<img src="{{image}}" />
+			<p class="tt-codename">{{codename}}</p>
+			<p class="tt-realname">{{realname}}</p>
+			<p class="stats tt-stance"><span>{{stance}}</span></p>
+			<p class="stats tt-gender">Gender<span>{{gender}}</span></p>
+			<p class="stats tt-alignment">Alignment<span>{{alignment}}</span></p>
+			<p class="stats tt-status">Status <span>{{status}}</span></p>
+		</div>
+	</script>
+	<script id="tooltip-info-mini" type="text/template">
+		<div class="tooltip-inner mini">
+			<p class="tt-codename">{{codename}}</p>
+			<p class="tt-realname">{{realname}}</p>
+			<p class="stats tt-stance"><span>{{stance}}</span></p>
+		</div>
+	</script>
+	<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+
+
+
+
+
+<!--        Made, with love, by Troy Eric Griggs.             -->
+
+</html>
