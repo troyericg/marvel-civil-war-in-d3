@@ -1,12 +1,24 @@
 /* "Before he swings the bat, a real slugger imagines an 
       arc inside his heart, arching directly to Heaven." */
 
+/*FONTS------------------------------------------------------------*/
 
+@font-face{
+	font-family: "PT Sans";
+	src:local("PT Sans");
+	src:url(http://troyericgriggs.com/assets/fonts/PTS55F.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: "PT Sans Narrow-Bold";
+	src:local("PT Sans Narrow-Bold");
+	src:url(http://troyericgriggs.com/assets/fonts/PTN77F.ttf) format('truetype');
+}
 
 /*BASE STYLES------------------------------------------------------------*/
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "PT Sans", arial, helvetica, sans-serif;
 	color:#3e3e3e;
 	font-size:1em;
 	font-smoothing:antialiased;
@@ -28,18 +40,6 @@ a:hover {
 }
 
 
-/*FONTS------------------------------------------------------------*/
-
-@font-face {
-	font-family: bebas;
-	src:url(../assets/fonts/BEBAS___.ttf);
-}
-@font-face {
-	font-family: trajan;
-	src:url(../assets/fonts/TrajanPro-Regular.ttf);
-}
-
-
 /*PAGE STRUCTURE------------------------------------------------------------*/
 
 div#wrapper {
@@ -53,63 +53,57 @@ div#wrapper {
 
 
 div#header {
-	text-align: center;
 	padding-top: 20px;
-}
-
-div#header p.kicker {
-	color: #000;
-	font-family: bebas, arial, helvetica, sans-serif;
-	font-size: 10px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	width: 100px;
-	margin: 0 auto;
-	padding: 0;
 	border-bottom: 1px solid #ccc;
-}
-
-div#header h1 {
-	color: #000;
-	font-family: trajan, "garamond", georgia, serif;
-	font-size: 44px;
-	font-weight: 200;
-	line-height: 44px;
-	text-transform: uppercase;
-	margin-bottom: 8px;
-	padding-top: 20px;
-}
-
-div#header h2 {
-	color: #000;
-	font-family: bebas, arial, helvetica, sans-serif;
-	font-size: 13px;
-	letter-spacing: 4px;
-	text-transform: uppercase;
-	margin-bottom: 20px;
+	font-family: "PT Sans", arial, helvetica, sans-serif;
+	width: 870px;
+	margin: 0 auto;
 }
 
 div#header p {
 	color: #808080;
-	font-family: georgia, "times new roman", serif;
 	font-size: 13px;
-	line-height: 19px;
-	width: 870px;
-	margin: 0 auto;
-	padding: 0 10px 20px 10px;
-	border-bottom: 1px solid #ccc;
+	line-height: 21px;
 }
 
-div#header p strong {
+div#header p.extra {
+	color: #000;
+	width: 300px;
+	margin: 0 auto;
+}
 
+div#header h1 {
+	color: #000;
+	font-size: 44px;
+	font-weight: 700;
+	line-height: 44px;
+	margin: 0 auto 16px auto;
+	padding-top: 20px;
+	width: 870px;
+}
+
+div#header p.extra {
+	display: inline;
+	float: left;
+	width: 150px;
+	border-bottom: none;
+	margin-right: 50px;
+}
+
+div#header p.intro {
+/*	display: inline;
+	float: left;*/
+	width: 650px;
+	padding: 0 0 20px 200px;
 }
 
 div#header p a,
 div#header p a:link {
 	color: #3182BD;
-	font-family: arial, helvetica, sans-serif;
+/*	font-family: arial, helvetica, sans-serif;*/
 	font-weight: bold;
 }
+
 
 /*MAIN STYLES------------------------------------------------------------*/
 
@@ -190,7 +184,7 @@ div#char-count {
 
 p.char-num {
 	color: #000;
-	font-family: arial, sans-serif;
+	font-family: "PT Sans", arial, helvetica, sans-serif;
 }
 
 p.char-num.upper span {
@@ -229,7 +223,7 @@ div.section-1 ul.filter {
     text-align: left;
     text-decoration: none solid rgb(51, 51, 51);
     border: 0px none rgb(51, 51, 51);
-    font: normal normal normal 10px/15px Arial;
+    font: normal normal normal 10px/15px "PT Sans", arial, helvetica, sans-serif;
     list-style: none outside none;
     margin: 0px;
     outline: rgb(51, 51, 51) none 0px;
@@ -245,7 +239,7 @@ div.section-1 ul.filter:after {
     visibility: hidden;
     content: '.';
     border: 0px none rgb(51, 51, 51);
-    font: normal normal normal 10px/15px Arial;
+    font: normal normal normal 10px/15px "PT Sans", arial, helvetica, sans-serif;
     list-style: none outside none;
     margin: 0px;
     outline: rgb(51, 51, 51) none 0px;
@@ -261,7 +255,7 @@ div.section-1 ul.filter li {
     width: 79px;
     background: rgb(249, 249, 249) none repeat scroll 0% 0% / auto padding-box border-box;
     border: 1px solid rgb(204, 204, 204);
-    font: normal normal normal 13px/17px Arial;
+    font: normal normal normal 13px/17px "PT Sans", arial, helvetica, sans-serif;
     list-style: none outside none;
     outline: rgb(153, 153, 153) none 0px;
     padding: 10px 8px;
@@ -355,7 +349,6 @@ ul.color-list li span {
 
 
 div.chart-nav-container {
-/*	position: relative;*/
 	display: inline-block;
 	width: 100%;
 	height: 46px;
@@ -526,6 +519,7 @@ div.tooltip-inner p {
 	width: 100px;
 	display: inline;
 	float: left;
+	font-family: arial, helvetica, sans-serif;
 	margin:0;
 	padding:0;
 }
